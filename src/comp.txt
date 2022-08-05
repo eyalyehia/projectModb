@@ -1,0 +1,64 @@
+                                                       //קוד התחלה של קומפוננטה 
+
+
+import React ,{Component} from "react";
+
+class Counter extends Component{
+render(){
+ return(
+    <div>
+        counter work
+    </div>
+
+ );
+}
+}
+
+export default Counter;
+
+                                //העברת מידע מאבא לבן באמצעות PROPS ולייצר אוביקטים ומשתנים להשתלה ע"י רנדור באמצעות SETSTATE,STATE
+               //אבא
+
+// myDate = "2030-01-01";
+// state = {myDate:"2030-01-01"} 
+
+// changeDate = () =>  {
+//   this.myDate = "2021-01-10";
+//   this.forceUpdate();
+//   this.setState({myDate:"2010-01-01"})
+// }
+
+//   render(){
+//   return (
+//     <div className="App">
+//       <Counter appDate={this.state.myDate}></Counter>
+//          <input />
+//          <button onClick={this.changeDate}>Change</button>
+//     </div>
+//   );
+// }
+// }
+              //בן
+import React ,{Component} from "react";
+
+class Counter extends Component{
+    state = {myDate:"2055-01-01"} 
+
+
+render(){
+ return(
+    <div>
+         <h2>Count down to {this.props.appDate}</h2>
+       <h3>Days: XX</h3>
+    </div>
+
+ );
+}
+}
+
+
+
+export default Counter;
+                                    //התחברות לספרית צד ריאקט
+
+import { BrowserRouter as Router, Route, Routes ,Link } from 'react-router-dom';
