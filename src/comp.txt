@@ -62,3 +62,5 @@ export default Counter;
                                     //התחברות לספרית צד ריאקט
 
 import { BrowserRouter as Router, Route, Routes ,Link } from 'react-router-dom';
+
+rfce
