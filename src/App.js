@@ -1,5 +1,5 @@
 import Vip from './data/vip';
-import './App.css';
+
 
 
 function App() {
