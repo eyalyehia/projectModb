@@ -1,14 +1,14 @@
-import Vip from './data/vip';
-
+import React from 'react'
+import {CenterComp} from './movieComp/CenterComp'
 
 
 function App() {
-  return(
-    <div className='App'>
-    <Vip />
+  return (
+    <div>
+            
+            <CenterComp />
     </div>
-  );
+  )
 }
 
-
-export default App;
+export default App
