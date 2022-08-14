@@ -1,12 +1,19 @@
 import React from 'react'
 
-export const MainComp = () => {
+export const MainComp = (props) => {
   return (
-    <div className='container d-flex-3'>
-   <img src='' ></img>     
-  <h2>שם התמונה</h2>
-  <p>סיפור קל על התמונה</p>
+    <div className='container'>
+      <div className='row'>
+  {props.restApi.map(item => {
+    return(
+      <div className='col-lg-6 border p-3'  key={item.imdbID}>
+     <h2>{item.Title}</h2>
+     <img src={item.Poster}  style={{width: 200}}></img>
+     </div>
+    )
+  })}
 
+</div>
     </div>
   )
 }
