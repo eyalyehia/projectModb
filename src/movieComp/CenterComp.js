@@ -1,8 +1,10 @@
 import React , {useEffect, useState} from 'react'
 import axios from 'axios'
 import {sortBy} from "lodash"
+import {Movieinfo} from '/Movieinfo'
 import { InputComp } from './InputComp'
 import { MainComp } from './MainComp'
+import { BrowserRouter as Router, Route, Switch ,Routes ,Link } from 'react-router-dom';
 
 export const CenterComp = () => {
 
@@ -30,6 +32,7 @@ let [sortSelect,setSortSelect] = useState("Title");
     let resp = await axios.get(url)
     let temp_ar = sortBy(resp.data.Search,sortSelect);
     arSet(temp_ar);
+    console.log(temp_ar)
    }
 
    const inputValue = (_val) => {
@@ -37,11 +40,22 @@ let [sortSelect,setSortSelect] = useState("Title");
    }
 
   return (
-    <div>
-        
-        <InputComp doSearchApi = {doSearchApi} inputValue = {inputValue} />
-        <MainComp restApi = {ar} />
+         <Router>
+                 <InputComp doSearchApi = {doSearchApi} inputValue = {inputValue} />
+          <Switch>
+            <Route exact path="/" render = {() => 
+       <div>
 
-    </div>
+     <MainComp restApi = {ar} />
+    
+ </div> 
+            } />
+
+          <Route exact path="/info/:id" component={Movieinfo} />
+
+
+   </Switch>
+   </Router>
   )
+ 
 }
