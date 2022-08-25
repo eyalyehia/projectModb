@@ -1,10 +1,11 @@
 import React , {useEffect, useState} from 'react'
 import axios from 'axios'
 import {sortBy} from "lodash"
-import {Movieinfo} from '/Movieinfo'
 import { InputComp } from './InputComp'
 import { MainComp } from './MainComp'
 import { BrowserRouter as Router, Route, Switch ,Routes ,Link } from 'react-router-dom';
+import { Movieinformation } from './Movieinformation'
+
 
 export const CenterComp = () => {
 
@@ -51,7 +52,7 @@ let [sortSelect,setSortSelect] = useState("Title");
  </div> 
             } />
 
-          <Route exact path="/info/:id" component={Movieinfo} />
+          <Route exact path="/info/:id" component= {Movieinformation}  />
 
 
    </Switch>
