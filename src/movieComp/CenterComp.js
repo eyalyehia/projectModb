@@ -28,8 +28,6 @@ let [sortSelect,setSortSelect] = useState("Title");
 
    const restApi = async() => {
     let url =  `http://www.omdbapi.com/?s=${input}&apikey=eb5a19e8`;
-    // let resp = await fetch(url);
-    // let data = await resp.json();
     let resp = await axios.get(url)
     let temp_ar = sortBy(resp.data.Search,sortSelect);
     arSet(temp_ar);

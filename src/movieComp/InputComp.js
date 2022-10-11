@@ -8,9 +8,9 @@ export const InputComp = (props) => {
   let id_change = useRef();
   let history = useHistory();
   return (
-    <div className='container-fluid bg-primary d-flex text-center'>
-    <div className='container'>
-        <input placeholder='input' ref={id_input} />
+    <div className='container-fluid bg-primary d-flex justify-content-center align-items-center'>
+    <div className='w-25 input-group mb-3 mt-3'>
+        <input placeholder='input' ref={id_input} className='form-control' />
         <button className='btn btn-dark' ref={click} onClick={() => { 
           history.push("/")
           props.inputValue(id_input.current.value)}}>Click Me</button>
