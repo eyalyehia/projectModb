@@ -1,12 +1,14 @@
 import React from 'react'
-import {CenterComp} from './movieComp/CenterComp'
+import { Home } from './VodMovie/home'
+
 
 
 function App() {
   return (
     <div>
-            
-            <CenterComp />
+             
+       
+             <Home />
     </div>
   )
 }
