@@ -13,7 +13,7 @@ export const VodStrip = (props) => {
     <div style={{backgroundImage: "url(Images/cinema.jpeg)"}}  className="d-block w-100 strip" alt="..."></div>
     </div>
     <div className="carousel-item">
-    <div style={{backgroundImage: "url(Images/netflix.webp)"}}  className="d-block w-100 strip" alt="..."></div>
+    <div style={{backgroundImage: "url(Images/pe2.jpg)"}}  className="d-block w-100 strip" alt="..."></div>
     </div>
   </div>
   </div>

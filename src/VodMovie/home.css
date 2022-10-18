@@ -5,11 +5,10 @@ body{
     margin: 0;
 }
 
-/* #id_input{
-    position: sticky;
-    z-index: 3;
-    top: 43;
-} */
+.id_input{
+    z-index: 1;
+    position: relative;
+}
 
 #id_img{
     width: 30%;
@@ -23,15 +22,22 @@ body{
 }
 
 .strip{
-min-height: 400px;
+min-height: 70vh;
 width: 100%;
 background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
+position: relative;
+z-index: -1;
 }
 
 #logo{
 text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
 color: #FFFFFF;
+font-size: 3em;
+}
+
+#id_info{
+    margin: 20px;
 }
 
